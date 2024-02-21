@@ -1,5 +1,6 @@
-import {useState, useEffect} from 'react';
-import TuileFilm from '../TuileFilm/TuileFilms';
+import {useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
+import TuileFilm from '../TuileFilms/TuileFilms';
 import './ListeFilms.css';
 
 function ListeFilms() {
@@ -17,13 +18,14 @@ function ListeFilms() {
   useEffect(()=>{
     console.log('rendu');
     fetch(urlListeFilms).then((reponse) => reponse.json()).then((data) => {
-      console.log(data);
       setListeFilms(data);
+      console.log(data);
     })
 
   }, [])
+  // boucle dans la liste de film
 const tuilesFilm = listeFilms.map((film, index)=> {
-  return <TuileFilm key={index} data={film} />
+  return <Link to={`/film/${film.id}`} key={index} > <TuileFilm data={film} /> </Link>
 })
 
 
@@ -32,7 +34,7 @@ const tuilesFilm = listeFilms.map((film, index)=> {
     {/* <button onClick={() => setEtat(!etat)}>Change etat</button> */}
       <h2>Liste des films</h2>
       <div>
-        {tuilesFilm}
+          {tuilesFilm}
       </div>
     </main>
   );
