@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+.catalogueTitre{
+    font-family: 'rubik';
+    font-size: 3rem;
+    font-weight: 400;
+    color: rgb(246, 246, 246);
+}
+
+.filtreItem{
+    font-family: 'rubik';
+    display: inline-block;
+    margin: 2rem;
+    transition: .4s;
+    position: relative;
+    border-bottom: 0px solid white;
+    
+}
+
+.filtres .filtreItem:hover{
+    cursor: pointer;
+    transition: .4s;
+
+
+}
+
+.filtres .filtreItem:hover::after {
+    content: '';
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: -1rem;
+    border-bottom: 1px solid white;
+}
+.filmListeContainer{
+    background-color:hsl(0, 0%, 10%);
+    border-radius: 1rem;
+    margin: 1rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.titre-filtres {
+    margin: 0 2rem;
+    text-align: center;
+}
+.filtres{
+/* border-radius: 10%; */
+/* background-color: beige; */
+}

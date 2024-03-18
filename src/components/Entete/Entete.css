@@ -1,0 +1,42 @@
+.header{
+    display: flex;
+    justify-content:space-between;
+    margin: 0 2rem;
+    padding: 0 2rem;
+    background-color: hsl(0, 0%, 10%);
+    border-radius: 5px;
+    margin-top: 2rem;
+    align-items: center;
+
+}
+.siteName, .menuItem{
+    text-decoration: none;
+    color: antiquewhite;
+}
+.siteName{
+    text-transform: uppercase;
+    font-size: larger;
+}
+.mainMenu {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    align-items: center;
+}
+.mainMenu input[type="text"]{
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0 1rem;
+    color: black;
+}
+.mainMenu button{
+    padding: 0.5rem 1rem;
+}
+.adminTag{
+    text-decoration: none;
+    color: aliceblue;
+    background-color:black;
+    cursor: pointer;
+    font-size: larger;
+    font-weight: bolder;
+}
